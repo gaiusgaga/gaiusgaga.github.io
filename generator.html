@@ -1,0 +1,41 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" href="style.css">
+  <meta name="viewport" content="initial-scale=1, user-scalable=no"> 
+  <title>Generator postow Underway_PL</title>
+  <link rel="icon" href="/icon.ico">
+</head>
+<body>
+<div class="meme-generator">
+  <label>Wybierz obraz:</label>
+  <input type="file" id="imageFileInput" class="button-5">
+
+  <input type="hidden" id="topTextInput" visibility="hidden">
+
+  <label>Tekst:</label>
+  <textarea id="singleTextInput" placeholder="Wpisz tekst" rows="3"></textarea>
+
+  <div class="font-settings">
+    <button id="toggleFontSettings" class="button-5">Ustawienia czcionki</button>
+    <div id="font-size-settings" class="font-size-settings">
+      <label>Rozmiar czcionki dla linii (opcjonalne):</label>
+      <div class="font-size-inputs">
+        <input type="number" id="fontSizeLine1" min="5" max="100" placeholder="Linia 1" value="17" class="font-size-input">
+        <input type="number" id="fontSizeLine2" min="5" max="100" placeholder="Linia 2" value="17" class="font-size-input">
+        <input type="number" id="fontSizeLine3" min="5" max="100" placeholder="Linia 3" value="17" class="font-size-input">
+      </div>
+      <label>Kolor czcionki:</label>
+      <input type="color" id="fontColor" value="#FFFFFF">
+      <button id="resetFontSizes" class="button-5">Reset</button>
+    </div>
+  </div>
+
+  <canvas id="meme"></canvas>
+  
+  <input type="button" value="POBIERZ" onclick="zapisz();" class="button-5">
+</div>
+<script src="script.js"></script> 
+</body>
+</html>
